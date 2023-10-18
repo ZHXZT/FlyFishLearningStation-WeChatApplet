@@ -1,0 +1,39 @@
+<!-- 搜索 -->
+<!-- <view class="search" bindtap="navToSearchPage">
+      <text class="iconfont icon-icon-test searchIcon"></text>
+      <input disabled type="text" placeholder="搜索免费好课" placeholder-class="placeholder"/>
+  </view> -->
+
+<!-- 滑动导航 -->
+<scroll-view scroll-x enable-flex enable-passive scroll-with-animation class="navScroll" scroll-left="{{scrollLeft}}">
+ 
+  <view class="navItem" wx:for="{{navList}}" wx:key="index"  data-type="{{item}}"  id="{{index}}" bindtap="getLessonData">
+    <view class="navContent {{navId === index?'active':''}}">{{item}}</view>
+  </view>
+
+</scroll-view>
+
+<!-- 课程列表 -->
+<view class="lessonList">
+  <scroll-view>
+
+    <view class="dyItem" wx:for="{{courseList}}" wx:key="index" data-id="{{index}}" bindtap="navToVideoPlayPage">
+      <!-- <navigator class="dyItem"> -->
+        <view class="pic">
+          <image class="" src="{{item.course_imgurl}}"></image>
+        </view>
+        <view class="txt">
+          <view class="title">{{item.course_title}}</view>
+          <view class="info">
+            <view class="info1">{{item.course_type}}</view>
+            <view class="info1">全栈课程</view>
+            <view class="info2">{{item.click_num}}次学习</view>
+          </view>
+        </view>
+      <!-- </navigator> -->
+    </view>
+
+  </scroll-view>  
+</view>
+
+<view class="done">--已加载全部数据--</view>

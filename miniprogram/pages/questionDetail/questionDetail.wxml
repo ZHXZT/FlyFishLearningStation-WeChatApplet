@@ -1,0 +1,20 @@
+<view class="container">
+
+  <view class="question">{{questionDetail.questionName}}</view>
+
+  <view class="content">
+
+    <view class="header">
+      <view class="iconfont icon-earth-full"></view>
+      <view class="title">答案解析</view>
+    </view>
+
+    <view class="info" >
+      <rich-text nodes="{{questionDetail.questionDetail}}"></rich-text>
+    </view>
+
+  </view>
+
+  
+
+</view>

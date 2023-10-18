@@ -1,0 +1,23 @@
+
+<view class="container">
+
+  <view class="title">欢迎使用飞鱼学习站</view>
+
+  <view class="login">
+    <view class="login_top">
+      <view class="avatar_button">
+        <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar" >
+          <image src="{{temporaryUrl}}"></image>
+        </button>
+
+      <view class="info">点击头像进行选择</view>
+    </view>
+    </view> 
+
+    <view class="login_bottom">
+      <input type="nickname" model:value="{{nickname}}" class="weui-input" placeholder="填写呢称"/>
+      <button bindtap="login">进入系统</button>
+    </view>
+  </view>
+
+</view>

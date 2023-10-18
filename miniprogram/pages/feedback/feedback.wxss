@@ -1,0 +1,38 @@
+.container{
+  margin: 0 20rpx;
+}
+.title{
+  margin-top: 10rpx;
+}
+.title input{
+  /* background-color: aqua; */
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1rpx solid #a8a8a8;
+  color: black;
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.info{
+/* background-color: blanchedalmond; */
+height: 400rpx;
+margin-top: 20rpx;
+}
+.info textarea{
+  width: 100%;
+  height: 400rpx;
+  font-size: 30rpx;
+  color: rgba(0, 0, 0, 0.911);
+}
+.submit{
+  position: fixed;
+  bottom: 40rpx;
+  right: 30rpx;
+}
+.submit button{
+  width: 200rpx;
+  height: 80rpx;
+  background-color: #ff8e43f8;
+  border-radius: 40rpx;
+  color: white;
+}

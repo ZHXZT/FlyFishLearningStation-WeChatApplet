@@ -1,0 +1,32 @@
+page{
+  background-color: rgba(0, 0, 0, 0.070);
+
+}
+.container{
+  background-color: white;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+.titleListItem{
+  margin: 0 30rpx;
+  font-size: 28rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  display: flex;
+  border-bottom: 1rpx solid rgba(0, 0, 0, 0.070);
+
+}
+.titleListItem .title{
+  /* background-color: antiquewhite; */
+  width: 500rpx;
+
+  overflow: hidden;
+text-overflow:ellipsis;
+white-space: nowrap;
+
+}
+.titleListItem .iconfont{
+  font-size: 24rpx;
+  margin-left: auto;
+}

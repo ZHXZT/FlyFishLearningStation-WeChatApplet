@@ -1,0 +1,99 @@
+<!-- 视频 -->
+<view class="videoPlay">
+  <video show-mute-btn autoplay src="{{lessonList[playId].video_url}}"></video>
+</view>
+
+<!-- 标题 -->
+<view class="txt">
+  <view class="title">{{courseInfo.course_title}}</view>
+  <view class="info">
+    <view class="info1">{{courseInfo.course_type}}</view>
+    <view class="info1">全栈课程</view>
+    <view class="info2">{{courseInfo.click_num}}次学习</view>
+  </view>
+</view>
+<view class="btn">
+  <view class="btn1" bindtap="addtocollection">加入收藏</view>
+  <view class="btn2"> <button open-type="share">分享朋友</button></view>
+
+</view>
+
+
+
+<view class="nav">
+<!-- 小导航 -->
+<view  class="navScroll">
+  <!-- scroll-x enable-flex scroll-with-animation -->
+ <view class="navItem" >
+   <view class="navContent {{navId === 0?'active':''}}" bindtap="changeNav" id="0">课程详情</view>
+ </view>
+ <view class="navItem" >
+   <view class="navContent {{navId === 1?'active':''}}" bindtap="changeNav" id="1">课程目录</view>
+ </view>
+ <view class="navItem" bindtap="getcommend" >
+   <view class="navContent {{navId === 2?'active':''}}" bindtap="changeNav" id="2">课程评价</view>
+ </view>
+</view>
+
+<!-- 课程详情 -->
+<view class="lessonDetail" hidden="{{navId == 0?'':'true'}}">
+  <rich-text nodes="{{courseInfo.course_content}}"></rich-text>
+</view>
+
+
+
+<!-- 课程目录 -->
+<view class="courseCatalogue" hidden="{{navId == 1?'':'true'}}">
+  <view class="courseCatalogueList">
+
+    <!-- {{playId === item.index?'playing':''}} -->
+    <view class="courseCatalogueItem {{playId == index?'playing':''}}" wx:for="{{lessonList}}" wx:key="index" id="{{index}}" bindtap="changeLesson" >
+      <view class="courseCatalogueItemTitle">{{item.class_name}}</view>
+      <view class="courseCatalogueItemInfo">
+        <view class="iconfont icon-bofang"></view>
+      </view>
+    </view>
+
+
+  </view>
+</view>
+
+
+
+<!-- 课程评价 -->
+<view class="courseEvaluation" hidden="{{navId == 2?'':'true'}}">
+
+  <view class="evaluateTitle">
+    <view class="allEvaluate">全部评论（{{courseCommend.length}}条）</view>
+    <view class="evaluate_input"><input type="text" placeholder="输入评价" bindinput="evaluateInput"/></view>
+    <view class="sendEvaluate" bindtap="sendEvaluate">发表评论</view>
+
+  </view>
+  
+  <view class="evaluateList">
+
+    <view class="evaluateItem" wx:for="{{courseCommend}}" wx:key="index">
+      <view class="evaluateImage"><image src="{{item.commentator_img}}"></image></view>
+      <view class="evaluateInfo">
+        <view class="evaluateName">{{item.commentator}}</view>
+        <view class="evaluateContent">{{item.content}}</view>
+        <view class="evaluateTime">{{item.commend_time}}</view>
+      </view>
+    </view>
+
+  </view>
+
+
+
+
+</view>
+
+
+
+</view>
+
+
+
+
+
+

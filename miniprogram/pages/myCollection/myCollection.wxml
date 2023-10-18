@@ -1,0 +1,22 @@
+<!-- 课程列表 -->
+<view class="lessonList">
+  <scroll-view>
+    <view class="dyMain" wx:for="{{collectionList}}" wx:key="index">
+
+      <view class="dyItem" bindtap="navTovideoPlay" data-id="{{index}}" data-title="{{item.course_title}}">
+        <view class="pic">
+          <image class="" src="{{item.course_imgurl}}"></image>
+        </view>
+        <view class="txt">
+          <view class="title">{{item.course_title}}</view>
+          <view class="info">
+            <view class="info1">{{item.course_type}}</view>
+          </view>
+        </view>
+      </view>
+
+      <view class="delete" data-title="{{item.course_title}}" bindtap="deleteCourse">取消收藏</view>
+
+    </view>
+  </scroll-view>  
+</view>

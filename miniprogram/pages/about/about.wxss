@@ -1,0 +1,33 @@
+.container{
+  background-color:rgba(0, 0, 0, 0.103);
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+display: flex;
+justify-content: center;
+}
+.body{
+  margin-top: 80rpx;
+  border-radius: 10rpx;
+  /* display: flex; */
+  width: 80vw;
+  height: 800rpx;
+  font-size: 28rpx;
+  letter-spacing: 4rpx;
+  color: rgba(0, 0, 0, 0.788);
+  background-color: white;
+}
+.title{
+  width: 80vw;
+  height: 100rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  line-height: 100rpx;
+  text-align: center;
+}
+.content{
+  /* background-color: thistle; */
+  margin: 0 40rpx;
+  margin-bottom: 15rpx;
+}

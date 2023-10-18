@@ -1,0 +1,101 @@
+<view>
+<!-- 轮播图 -->
+  <view class="banner">
+    <swiper indicator-active-color="#ff9839" indicator-dots="true" autoplay circular interval="3000">
+      <swiper-item wx:for="{{carouselList}}"  bindtap="navToVideoPlay" data-title="{{item.course_title}}" wx:key="index">
+        <image src="{{item.carousel_img}}"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <!-- grid -->
+  <scroll-view class="major" scroll-x>
+      <view class="box"  bindtap="navToLessonPage" data-id="2" data-type="java">
+        <image src="../../static/images/images/kecheng1.png" class="pic" ></image>
+        <view class="txt">JAVA</view>
+      </view>
+      <view  class="box" bindtap="navToLessonPage" data-id="1" data-type="前端">
+        <image src="../../static/images/images/kecheng2.png" class="pic"></image>
+        <view class="txt">前端</view>
+      </view>
+      <view class="box" bindtap="navToLessonPage" data-id="3" data-type="python">
+        <image src="../../static/images/images/kecheng3.png" class="pic"></image>
+        <view class="txt">Python</view>
+      </view>
+      <view class="box" bindtap="navToLessonPage" data-id="4" data-type="软件测试">
+        <image src="../../static/images/images/kecheng4.png" class="pic"></image>
+        <view class="txt">软件测试</view>
+      </view>
+      <view class="box" bindtap="navToLessonPage" data-id="5" data-type="网络安全">
+        <image src="../../static/images/images/kecheng5.png" class="pic"></image>
+        <view class="txt">网络安全 </view>
+      </view>
+  </scroll-view>
+
+
+    
+  <!-- 热门面试题 -->
+  <view class="works">
+    <view class="container">
+
+      <view class="pubTitle">
+        <view class="txt">热门题类</view>
+        <navigator open-type="reLaunch" class="more" url="/pages/questionBank/questionBank">更多></navigator>
+      </view>
+
+      <view class="wkMain">
+      
+        <view class="box" wx:for="{{hotQusetionList}}"  bindtap="navToQuestionPage" data-type="{{item.question_type}}" wx:key="index"> 
+        <image src="{{item.question_img}}" class="pic"></image>
+          <view class="ceng">
+              <view class="txt">{{item.question_type}}</view>
+              <view class="line"></view>
+              <view class="des">IT design works</view>
+            </view>
+        </view>
+
+      </view>
+    </view>
+  </view>
+
+
+<!-- 热门课程 -->
+<view class="dynamic">
+<view class="container">
+
+  <view class="pubTitle">
+    <view class="txt">精品课程</view>
+    <navigator open-type="reLaunch" class="more" url="/pages/lesson/lesson">更多></navigator>
+  </view>
+
+  <view class="itemList"> 
+
+  <view class="dyItem" wx:for="{{courseList}}" wx:key="index" data-index="{{index}}" bindtap="navToVideoPlayPage">
+        <view class="pic">
+          <image class="" src="{{item.course_imgurl}}"></image>
+        </view>
+        <view class="txt">
+          <view class="title">{{item.course_title}}</view>
+          <view class="info">
+            <view class="info1">{{item.course_type}}</view>
+            <view class="info1">全栈课程</view>
+            <view class="info2">{{item.click_num}}次学习</view>
+          </view>
+        </view>
+    </view>
+
+  </view>
+
+
+
+</view>
+</view>
+
+
+
+
+
+
+
+
+</view>

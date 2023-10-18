@@ -1,0 +1,5 @@
+<view class="container"> 
+  <view class="title"><input type="text" focus="true" placeholder="问题或意见" bindinput="inputchange"/></view>
+  <view class="info"><textarea maxlength="-1" placeholder="告诉我您的意见或存在的问题，我将做得更好" bindinput="textchange" ></textarea></view>
+  <view class="submit"><button bindtap="submit">提交</button></view>
+</view>

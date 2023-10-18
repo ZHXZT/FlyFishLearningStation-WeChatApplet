@@ -1,0 +1,12 @@
+
+<view class="container">
+  <view class="titleList"  wx:for="{{question}}" wx:key="index"> 
+
+
+    <view class="titleListItem" bindtap="navToQuestionDetailPage"  data-item="{{item}}">
+      <view class="title" >{{index+1}}. {{item.questionName}}</view>
+      <view class="iconfont icon-xiangyoujiantou"></view>
+    </view>
+
+  </view>
+</view>

@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/lesson/lesson",
+    "pages/personal/personal",
+    "pages/search/search",
+    "pages/videoPlay/videoPlay",
+    "pages/learningHistory/learningHistory",
+    "pages/myCollection/myCollection",
+    "pages/questionBank/questionBank",
+    "pages/question/question",
+    "pages/questionDetail/questionDetail",
+    "pages/about/about",
+    "pages/feedback/feedback"
+  ],
+  "tabBar": {
+    "color": "#b6b6b6",
+    "selectedColor": "#fe9132",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./static/images/tabs/icon_home@2x.png",
+        "selectedIconPath": "./static/images/tabs/icon_home_selected@2x.png"
+      },
+      {
+        "pagePath": "pages/lesson/lesson",
+        "text": "课程",
+        "iconPath": "./static/images/tabs/icon_study@2x.png",
+        "selectedIconPath": "./static/images/tabs/icon_study_selected@2x.png"
+      },
+      {
+        "pagePath": "pages/questionBank/questionBank",
+        "text": "题库",
+        "iconPath": "./static/images/tabs/question1.png",
+        "selectedIconPath": "./static/images/tabs/qusetion2.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "个人中心",
+        "iconPath": "./static/images/tabs/icon_my@2x.png",
+        "selectedIconPath": "./static/images/tabs/icon_my_selected@2x.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "飞鱼学习站"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

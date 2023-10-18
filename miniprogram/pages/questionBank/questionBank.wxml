@@ -1,0 +1,23 @@
+<view class="container">
+  <view class="bandTitle">基础题库</view>
+
+  <view class="questionList" >
+  
+    <navigator  wx:for="{{questionBand}}" wx:key="index" class="questionItem" url="/pages/question/question?type={{item.questionType}}">
+      <view class="header">
+        <view class="iconfont {{item.questionIcon}}"></view>
+        <view class="text">{{item.questionType}}</view>
+      </view>
+      <view class="tail">
+        <!-- <view class="num">{{item.questionNum}}</view> -->
+        <view class="iconfont icon-icon_220"></view>
+      </view>
+  </navigator>
+
+  </view>
+
+
+
+</view>
+
+

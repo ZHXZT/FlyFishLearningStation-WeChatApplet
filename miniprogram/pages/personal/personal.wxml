@@ -1,0 +1,48 @@
+
+<view class="my-container">
+<!-- 顶部头像 -->
+	<view class="header">
+		<image class="avatar" src="{{avatar}}"/>
+		<text class="nickname">{{userName}}</text>
+	</view>
+
+<!-- 学习记录 -->
+	<view class="tips">
+		<view class="left">
+			<text class="title">{{studyDuration}}</text>
+			<text class="subtitle">本次学习时长</text>
+		</view>
+		<view class="middle">
+			<text class="title">{{totalStudyDuration}}</text>
+			<text class="subtitle">累计学习时长</text>
+		</view>
+		<view class="right">
+			<text class="title">{{collectionNum}}</text>
+			<text class="subtitle" >收藏个数</text>
+		</view>
+	</view>
+
+
+<!-- 列表 -->
+	<view class="cells">
+		<view class="cell" bindtap="navToLearningHistoryPage">
+			<text>学习历史</text>
+			<image src="../../static/images/images/arrow@2x.png" alt="" />
+		</view>
+		<view class="cell" bindtap="navToMyCollectionPage">
+			<text>我的收藏</text>
+			<image src="../../static/images/images/arrow@2x.png" alt="" />
+		</view>
+		<view class="cell" bindtap="navToAboutPage">
+			<text>关于小程序</text>
+			<image src="../../static/images/images/arrow@2x.png" alt="" />
+		</view>
+    <view class="cell" bindtap="navToFeedbackPage">
+			<text>BUG反馈</text>
+			<image src="../../static/images/images/arrow@2x.png" alt="" />
+		</view>
+
+	</view>
+
+  
+</view>

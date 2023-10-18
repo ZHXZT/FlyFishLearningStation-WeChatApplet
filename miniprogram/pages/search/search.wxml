@@ -1,0 +1,33 @@
+<!-- 搜索 -->
+<view class="search" bindtap="navToSearchPage">
+      <text class="iconfont icon-icon-test searchIcon"></text>
+      <input focus type="text" placeholder="大前端" placeholder-class="placeholder"/>
+  </view>
+
+<!-- 历史记录 -->
+<view class="search-wrap">
+    <view class="history-wrap">
+      <view class="search-header">
+        <text class="search-title">历史搜索</text>
+        <text class="search-clear" >清除</text>
+      </view>
+      <view class="search-content">
+        <view class="search-item" hover-class="hover-history-item" wx:for="{{8}}">C++</view>
+      </view>
+    </view>
+
+<!-- 热门搜索 -->
+    <view class="popular-wrap">
+      <view class="search-header">
+        <text class="search-title">热门搜索</text>
+      </view>
+      <view class="search-content">
+        <view class="search-item" hover-class="hover-history-item"  wx:for="{{8}}">前端</view>
+      </view>
+    </view>
+
+
+  </view>
+
+
+
